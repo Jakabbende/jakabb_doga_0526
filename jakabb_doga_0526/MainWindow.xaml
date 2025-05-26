@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button Content="Lekérdez" HorizontalAlignment="Left" Margin="171,96,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <ListBox x:Name="lbadatok" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="400,35,32,35" SelectionChanged="lbadatok_SelectionChanged"/>
+        <Label x:Name="lbfilmazon" Content="-" HorizontalAlignment="Left" Margin="173,136,0,0" VerticalAlignment="Top">
+            <UIElement.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </UIElement.RenderTransform>
+        </Label>
+        <TextBox x:Name="tb1" HorizontalAlignment="Left" Margin="143,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb2" HorizontalAlignment="Left" Margin="143,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb3" HorizontalAlignment="Left" Margin="143,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb4" HorizontalAlignment="Left" Margin="143,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb5" HorizontalAlignment="Left" Margin="143,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Módosít" HorizontalAlignment="Left" Margin="173,365,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+
     </Grid>
 </Window>
