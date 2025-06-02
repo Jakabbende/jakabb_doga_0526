@@ -7,24 +7,37 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Lekérdez" HorizontalAlignment="Left" Margin="171,96,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="61" Margin="43,19,0,0" Stroke="Black" VerticalAlignment="Top" Width="309"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="223" Margin="43,96,0,0" Stroke="Black" VerticalAlignment="Top" Width="309"/>
+
+        <Button Content="Lekérdez" HorizontalAlignment="Left" Margin="83,55,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <ListBox x:Name="lbadatok" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="400,35,32,35" SelectionChanged="lbadatok_SelectionChanged"/>
-        <Label x:Name="lbfilmazon" Content="-" HorizontalAlignment="Left" Margin="173,136,0,0" VerticalAlignment="Top">
-            <UIElement.RenderTransform>
+        <Label x:Name="lbfilmazon" Content="-" HorizontalAlignment="Left" Margin="143,107,0,0" VerticalAlignment="Top">
+            <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </UIElement.RenderTransform>
+            </Label.RenderTransform>
         </Label>
-        <TextBox x:Name="tb1" HorizontalAlignment="Left" Margin="143,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tb2" HorizontalAlignment="Left" Margin="143,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tb3" HorizontalAlignment="Left" Margin="143,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tb4" HorizontalAlignment="Left" Margin="143,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tb5" HorizontalAlignment="Left" Margin="143,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Módosít" HorizontalAlignment="Left" Margin="173,365,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <TextBox x:Name="tb1" HorizontalAlignment="Left" Margin="143,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb2" HorizontalAlignment="Left" Margin="143,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb3" HorizontalAlignment="Left" Margin="143,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb4" HorizontalAlignment="Left" Margin="143,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb5" HorizontalAlignment="Left" Margin="143,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Módosít" HorizontalAlignment="Left" Margin="286,283,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <Label Content="Cím:" HorizontalAlignment="Left" Margin="68,144,0,0" VerticalAlignment="Top"/>
+        <Label Content="Azonosító:" HorizontalAlignment="Left" Margin="68,113,0,0" VerticalAlignment="Top"/>
+        <Label Content="Év:" HorizontalAlignment="Left" Margin="68,175,0,0" VerticalAlignment="Top"/>
+        <Label Content="Színes?:" HorizontalAlignment="Left" Margin="68,214,0,0" VerticalAlignment="Top"/>
+        <Label Content="Műfaj:" HorizontalAlignment="Left" Margin="68,247,0,0" VerticalAlignment="Top"/>
+        <Label Content="Hossz:" HorizontalAlignment="Left" Margin="68,277,0,0" VerticalAlignment="Top"/>
+        <Button Content="Törlés" HorizontalAlignment="Left" Margin="254,55,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
+        <Label Content="Lekérdezés, adatok betöltése" HorizontalAlignment="Left" Margin="40,24,0,0" VerticalAlignment="Top"/>
+        <Label Content="Adat törlése" HorizontalAlignment="Left" Margin="236,24,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

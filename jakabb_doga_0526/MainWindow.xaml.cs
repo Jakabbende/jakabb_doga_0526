@@ -23,7 +23,7 @@ namespace jakabb_doga_0526
     public partial class MainWindow : Window
     {
 
-        MySqlConnection kapcsolat = new MySqlConnection("server = localhost;database = jakabb_11a; uid = 'root'; password = ''");
+        MySqlConnection kapcsolat = new MySqlConnection("server = localhost;database = jakab_11a; uid = 'root'; password = ''");
 
         public MainWindow()
         {
@@ -62,6 +62,14 @@ namespace jakabb_doga_0526
             kapcsolat.Open();
             var upd = new MySqlCommand($"update filmek set cim = '{tb1.Text}',ev = {tb2.Text},szines = '{tb3.Text}',mufaj = '{tb4.Text}', hossz = {tb5.Text} where filmazon = '{lbfilmazon.Content}'", kapcsolat).ExecuteNonQuery();
             kapcsolat.Close();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            kapcsolat.Open();
+            var del = new MySqlCommand($"delete from filmek where filmazon = '{lbfilmazon.Content}'", kapcsolat).ExecuteNonQuery();
+            kapcsolat.Close();
+            lbadatok.Items.Remove(lbadatok.SelectedItem);
         }
     }
 }
